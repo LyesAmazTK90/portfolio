@@ -84,7 +84,7 @@ Practical Applications in Real-World Scenarios:
 
     Predictive Customer Classification: By training the model on existing clients, it can classify new or prospective clients, helping sales teams determine the likely segment and optimal strategy early in the customer journey. This approach gives the sales force a predictive advantage, enabling faster adaptation to client needs.
 
-    Environic Analytics for Tangible Value: By embedding analytics into operational workflows, the model generates real-time insights that enrich customer relationship management (CRM) systems. These insights can support performance tracking by segment, ROI analysis for marketing campaigns, and dynamic adjustments in strategy based on evolving client data.
+    By embedding analytics into operational workflows, the model generates real-time insights that enrich customer relationship management (CRM) systems. These insights can support performance tracking by segment, ROI analysis for marketing campaigns, and dynamic adjustments in strategy based on evolving client data.
 
 Project Status
 
