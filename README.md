@@ -40,6 +40,7 @@ Project Status
 This project demonstrates the potential for Formula 1 racing to use data and analytics to reach ambitious sustainability goals.
 
 Completed - minor patches may be added in the future.
+
 Project 2: Predictive Maintenance Model for Rotational Machines
 
 In this project, I developed a machine learning model to predict failures in rotational machines based on sensor data (vibration levels, temperature, etc.). The model helps anticipate maintenance needs and prevent machine breakdowns, thereby improving operational efficiency.
@@ -52,6 +53,7 @@ Key Details:
 Project Status
 
 Completed - can be adapted for various types of industrial machinery.
+
 Project 3: Sentiment Analysis App with Streamlit
 
 This project involved building a sentiment analysis app that combines natural language processing (NLP) and voice sentiment analysis using Streamlit. The app processes text and voice inputs to determine user sentiment in real time.
@@ -64,8 +66,6 @@ Key Features:
 Project Status
 
 Completed - demonstrates the integration of multiple forms of input (text and voice) to provide sentiment insights.
-
-Project 4: Client Segmentation and Clustering for Business Insights
 
 Project 4: Client Segmentation and Clustering for Business Insights
 
