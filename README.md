@@ -116,4 +116,168 @@ This approach is highly adaptable to scenarios in real estate market analysis, o
 Project Status
 Completed - Ready for deployment in market forecasting applications or as a foundation for further development of custom real estate insights solutions.
 
+
+Project 6: E-Commerce Recommendation System
+
+🔹 Overview
+
+This project focuses on data analysis, session tracking, and personalized product recommendations using real-world e-commerce data. The dataset includes customer interactions, products, and session-based activity logs.
+
+The project is structured into three main tasks:
+
+    Task 1: Extract key insights from the dataset using queries.
+    Task 2: Analyze session behavior (session duration & cart engagement).
+    Task 3: Develop a personalized recommendation system using ALS (Alternating Least Squares).
+
+🔹 Task 1: Data Analysis & Query Extraction
+✅ Key Objectives
+
+We extracted insights from the dataset using Pandas to understand user behavior, product interactions, and purchase patterns.
+📌 Questions & Solutions
+
+1️⃣ Find the smallest partnumber of a product with color_id=3 and a discount.
+
+    Solution: Filtered products by color_id=3 and discount=1.
+    Outcome: Found the product with the lowest partnumber.
+
+2️⃣ Find the user with lowest F, highest R, and lowest user_id in the country with most users spending M < 500.
+
+    Solution:
+        Used an API to fetch user data (M, F, R, country).
+        Cached the data to avoid re-fetching.
+        Identified the country with the most users spending M < 500.
+        Sorted users by F (ascending), R (descending), user_id (ascending).
+    Final Answer: 187374
+
+3️⃣ How many times is a product visited before being added to the cart (on average)?
+
+    Solution: Computed visit_count / cart_count for each product.
+    Outcome: Returned the average number of visits before adding to cart.
+
+4️⃣ Find the most common device_type used for adding discounted products to the cart.
+
+    Solution: Merged train data with products to find the most frequent device_type.
+    Outcome: Identified the most common device type for discounted items.
+
+5️⃣ Identify which top user (most interactions) uses device_type=3 the most.
+
+    Solution:
+        Found the top 3 users in each country.
+        Checked who interacted with device_type=3 the most.
+    Outcome: Identified the most active user on mobile devices.
+
+6️⃣ Find the number of unique products interacted with outside a user’s registered country.
+
+    Solution:
+        Mapped user_id → country.
+        Identified interactions where interaction_country ≠ registered_country.
+    Outcome: Counted unique products interacted with across borders.
+
+7️⃣ Find the most common pagetype for each product family in the first week of June.
+
+    Solution:
+        Merged train data with products.pkl to extract family.
+        Grouped by family, pagetype to find the most frequent pagetype.
+    Outcome: Identified which pages were most commonly viewed per product family.
+
+🔹 Task 2: Session Analysis
+✅ Objective
+
+Analyze customer session behavior by calculating:
+
+    Total session duration (seconds).
+    Cart addition ratio (products added to cart / total products interacted with).
+
+📌 Approach
+
+    Step 1: Converted timestamps to datetime format.
+    Step 2: Computed session duration as (last event - first event) per session.
+    Step 3: Computed cart addition ratio as (items added to cart / total interactions).
+    Step 4: Sorted results by user_id and session_id.
+
+📌 Example Output
+
+    user_id  session_id  total_session_time  cart_addition_ratio
+0    3051.0       20301              47.208                0.000
+1   51325.0        4465               0.000                0.000
+2   62586.0       19184             520.169                0.125
+3  185244.0       18588             121.659                0.000
+4  271973.0        7503             109.557                0.000
+
+    Short sessions with 0.000 cart ratio → Users who browsed but didn’t add items.
+    Longer sessions with higher cart ratios → Engaged users likely to convert.
+
+🎯 Real-world impact: Helps optimize session-based recommendations by understanding engagement levels.
+🔹 Task 3: Personalized Product Recommendation System
+✅ Objective
+
+Develop a recommendation model to suggest five products per session.
+📌 Approach
+
+1️⃣ Data Preparation
+
+    Loaded train, test, and product data.
+    Mapped user_id and partnumber to ALS-compatible indices.
+
+2️⃣ Train ALS Model (Collaborative Filtering)
+
+    Built a user-item interaction matrix (sparse matrix).
+    Trained Alternating Least Squares (ALS) to predict latent factors.
+    Used 50 factors & 20 iterations for optimization.
+    Output: User-item interaction matrix & ALS model.
+
+3️⃣ Generating Recommendations
+
+    For each session in test data:
+        Checked if user exists in train data.
+        Used ALS model to recommend 5 products per session.
+        New users received empty recommendations (can be improved using hybrid models).
+
+4️⃣ Saving Predictions
+
+    Stored recommendations in predictions_3.json.
+    Fixed JSON serialization issue (converted NumPy int64 → Python int).
+
+📌 Example Output (JSON)
+
+{
+    "746": [],
+    "1306": [],
+    "1364": [],
+    "4711": [27593, 15206, 38308, 33047, 23014],
+    "15073": [948, 15206, 23014, 688, 20375]
+}
+
+    Empty lists ([]) → Sessions with no past interactions (new users).
+    List of product IDs → Top 5 recommended products per session.
+
+🔹 Real-World Applications
+
+This project mirrors real-world recommendation engines used in:
+🛍️ E-commerce (Zara, Amazon, ASOS)
+
+✅ Personalized Product Recommendations → Improve conversion rates by suggesting relevant products.
+✅ Session-Based Insights → Helps optimize shopping experience for mobile vs. desktop users.
+✅ Cross-Border Shopping Analysis → Detects global shopping trends and localized demand.
+🎬 Streaming (Netflix, Spotify, YouTube)
+
+✅ User-Based Content Recommendations → Suggest movies, shows, music, or videos based on session activity.
+✅ Hybrid Models (ALS + Content-Based Filtering) → Combine behavioral + content similarity.
+🏪 Retail Analytics (Walmart, Target, Carrefour)
+
+✅ Session Duration & Cart Analysis → Optimize store layouts (virtual or physical).
+✅ Customer Segmentation → Identify new vs. returning customers for targeted marketing.
+✅ Product Trends & Discount Optimization → Understand which discounts drive more engagement.
+🎯 Key Takeaways
+
+✅ Task 1: Extracted valuable user & product insights.
+✅ Task 2: Analyzed session behavior & engagement.
+✅ Task 3: Developed a scalable recommendation system.
+
+🎯 Next Steps: 🚀 Improve recommendations for new users (cold-start problem).
+🚀 Deploy API for real-time recommendations.
+🚀 Test hybrid deep learning models (Transformers, Neural CF, LLMs).
+
+🔥 This project can be applied to any recommendation-based industry! 🚀
+
 Feel free to reach out for any questions about the project’s structure, methodology, or potential applications. I’m eager to discuss how these methods can be customized further to support specific business needs.
