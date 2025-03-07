@@ -257,21 +257,32 @@ This project mirrors real-world recommendation engines used in:
 🛍️ E-commerce (Zara, Amazon, ASOS)
 
 ✅ Personalized Product Recommendations → Improve conversion rates by suggesting relevant products.
+
 ✅ Session-Based Insights → Helps optimize shopping experience for mobile vs. desktop users.
+
 ✅ Cross-Border Shopping Analysis → Detects global shopping trends and localized demand.
+
 🎬 Streaming (Netflix, Spotify, YouTube)
 
 ✅ User-Based Content Recommendations → Suggest movies, shows, music, or videos based on session activity.
+
 ✅ Hybrid Models (ALS + Content-Based Filtering) → Combine behavioral + content similarity.
+
 🏪 Retail Analytics (Walmart, Target, Carrefour)
 
 ✅ Session Duration & Cart Analysis → Optimize store layouts (virtual or physical).
+
 ✅ Customer Segmentation → Identify new vs. returning customers for targeted marketing.
+
 ✅ Product Trends & Discount Optimization → Understand which discounts drive more engagement.
+
+
 🎯 Key Takeaways
 
 ✅ Task 1: Extracted valuable user & product insights.
+
 ✅ Task 2: Analyzed session behavior & engagement.
+
 ✅ Task 3: Developed a scalable recommendation system.
 
 🎯 Next Steps: 🚀 Improve recommendations for new users (cold-start problem).
