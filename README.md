@@ -195,19 +195,13 @@ Analyze customer session behavior by calculating:
     Step 3: Computed cart addition ratio as (items added to cart / total interactions).
     Step 4: Sorted results by user_id and session_id.
 
-📌 Example Output
 
-    user_id  session_id  total_session_time  cart_addition_ratio
-0    3051.0       20301              47.208                0.000
-1   51325.0        4465               0.000                0.000
-2   62586.0       19184             520.169                0.125
-3  185244.0       18588             121.659                0.000
-4  271973.0        7503             109.557                0.000
 
     Short sessions with 0.000 cart ratio → Users who browsed but didn’t add items.
     Longer sessions with higher cart ratios → Engaged users likely to convert.
 
 🎯 Real-world impact: Helps optimize session-based recommendations by understanding engagement levels.
+
 🔹 Task 3: Personalized Product Recommendation System
 ✅ Objective
 
