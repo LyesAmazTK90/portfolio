@@ -16,7 +16,7 @@ jobs:
       
       - uses: alexcerezo/linkedin-cards@main
         with:
-          apify_api_token: ${{ secrets.APIFY_API_TOKEN }}
-          linkedin_username: ${{ vars.LINKEDIN_USERNAME }}
+          apify_api_token: ${{ secrets.apify_api_uAMMsm6qVcyhZvYohJBE6Uv0i1rfi50MMDau }}
+          linkedin_username: ${{ vars.https://www.linkedin.com/in/lyestk }}
           max_cards_to_generate: 4
           language: en
