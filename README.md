@@ -1,5 +1,8 @@
 # portfolio
 
+<!-- BEGIN LINKEDIN-CARDS -->
+<!-- END LINKEDIN-CARDS -->
+
 Welcome to my GitHub portfolio! Here you will find a collection of five projects that I have worked on, covering various domains such as data visualization, machine learning, natural language processing, and business intelligence. Each project showcases my skills in different areas, ranging from building interactive applications to predictive modeling and clustering. Below is an overview of the projects:
 
 Project 1: Interactive Application - Formula 1 Visualizations
