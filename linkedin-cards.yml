@@ -17,6 +17,6 @@ jobs:
       - uses: .github/workflows/linkedin-cards.yml/linkedin-cards@main
         with:
           apify_api_token: ${{ secrets.APIFY_API_TOKEN }}
-          linkedin_username: ${{ vars.lyestk }}
+          linkedin_username: ${{ vars.LINKEDIN_USERNAME }}
           max_cards_to_generate: 4
           language: en
