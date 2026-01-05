@@ -14,7 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - uses: alexcerezo/linkedin-cards@main
+      - uses: lyestk/linkedin-cards@main
         with:
           apify_api_token: ${{ secrets.apify_api_uAMMsm6qVcyhZvYohJBE6Uv0i1rfi50MMDau }}
           linkedin_username: ${{ vars.lyestk }}
