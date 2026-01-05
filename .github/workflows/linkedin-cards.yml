@@ -9,14 +9,10 @@ permissions:
   contents: write
 
 jobs:
-  linkedin-cards:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      
-      - uses: .github/workflows/linkedin-cards.yml/linkedin-cards@main
-        with:
-          apify_api_token: ${{ secrets.apify_api_uAMMsm6qVcyhZvYohJBE6Uv0i1rfi50MMDau }}
-          linkedin_username: ${{ vars.lyestk }}
-          max_cards_to_generate: 4
-          language: en
+  call-linkedin-cards:
+    uses: ./.github/workflows/linkedin-cards.yml
+    with:
+      apify_api_token: ${{ secrets.APIFY_API_TOKEN }}
+      linkedin_username: ${{ vars.lyestk }}
+      max_cards_to_generate: 4
+      language: en
